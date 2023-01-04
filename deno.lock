@@ -4,6 +4,19 @@
     "https://deno.land/std@0.168.0/fmt/colors.ts": "03ad95e543d2808bc43c17a3dd29d25b43d0f16287fe562a0be89bf632454a12",
     "https://deno.land/std@0.168.0/testing/_diff.ts": "a23e7fc2b4d8daa3e158fa06856bedf5334ce2a2831e8bf9e509717f455adb2c",
     "https://deno.land/std@0.168.0/testing/_format.ts": "cd11136e1797791045e639e9f0f4640d5b4166148796cad37e6ef75f7d7f3832",
-    "https://deno.land/std@0.168.0/testing/asserts.ts": "51353e79437361d4b02d8e32f3fc83b22231bc8f8d4c841d86fd32b0b0afe940"
+    "https://deno.land/std@0.168.0/testing/asserts.ts": "51353e79437361d4b02d8e32f3fc83b22231bc8f8d4c841d86fd32b0b0afe940",
+    "https://deno.land/std@0.170.0/_util/asserts.ts": "d0844e9b62510f89ce1f9878b046f6a57bf88f208a10304aab50efcb48365272",
+    "https://deno.land/std@0.170.0/bytes/bytes_list.ts": "aba5e2369e77d426b10af1de0dcc4531acecec27f9b9056f4f7bfbf8ac147ab4",
+    "https://deno.land/std@0.170.0/bytes/concat.ts": "97a1274e117510ffffc9499c4debb9541e408732bab2e0ca624869ae13103c10",
+    "https://deno.land/std@0.170.0/bytes/copy.ts": "d14a58f188a997ee0d2ba696d0c82a42f4fb4b6705e90a4238b77d7644dae24c",
+    "https://deno.land/std@0.170.0/io/buf_reader.ts": "6c0eb067040a9931be2d24de50f56e67b10e3ff69d5344575df06caddf551417",
+    "https://deno.land/std@0.170.0/io/buf_writer.ts": "b1ee5325cec3386596c67b1c7510bfc7e42b2f505060fe2e9d6536cdefdbb30c",
+    "https://deno.land/std@0.170.0/io/buffer.ts": "04e4d9a7bffffeddd75df7da795001871857d83f8e7772e6a3eee9d174f33d38",
+    "https://deno.land/std@0.170.0/io/read_delim.ts": "6bff17d31730eeab402633ee53701ac16e7b575a343c432acf7bd61bd649fd05",
+    "https://deno.land/std@0.170.0/io/read_lines.ts": "51e2841394effe1473f588de2a87d62b1c2deb63ce869115506324e228f9e67b",
+    "https://deno.land/std@0.170.0/io/read_string_delim.ts": "70b20eebd853269252d4a833834a2677b711f216842709d11005ba291d822a0a",
+    "https://deno.land/std@0.170.0/io/types.d.ts": "790d3a3fa6b7f298d4cfbcf8bfd9d4be595c1b1acaa3eebb3009177df98bf93c",
+    "https://deno.land/std@0.170.0/streams/read_all.ts": "52c733b63ca52af7d78326228529d7d629d5b3bb7c34c0a0261b5a6ecc209e73",
+    "https://deno.land/std@0.170.0/streams/write_all.ts": "7525aa90e34a2bb56d094403ad9c0e31e7db87a47cb556e6dc0404e6deca084c"
   }
 }

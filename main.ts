@@ -1,9 +1,13 @@
 import { readAllSync } from "https://deno.land/std@0.170.0/streams/read_all.ts";
 import { writeAllSync } from "https://deno.land/std@0.170.0/streams/write_all.ts";
+import Scanner, { Token } from "./scanner.ts";
 
 if (import.meta.main) {
   main(Deno.args);
 }
+
+// TODO: as a class member, or keep functional with an error return?
+// static const hadError = false;
 
 function main(args: string[]) {
   if (args.length > 1) {
@@ -17,8 +21,8 @@ function main(args: string[]) {
 }
 
 function runFile(filePath: string) {
-    const source = Deno.readTextFileSync(filePath);
-    run(source);
+  const source = Deno.readTextFileSync(filePath);
+  run(source);
 }
 
 function runPrompt() {
@@ -30,5 +34,23 @@ function runPrompt() {
 }
 
 function run(source: string) {
-  console.log(`running code:\n\n${source}`);
+  const scanner = new Scanner(source);
+  const [_tokens, errors] = scanner.scanTokens();
+
+  if (errors.length > 0) {
+    console.error(`Errors:\n`);
+    for (const error of errors) {
+      console.log(`${JSON.stringify(error)}`);
+    }
+    Deno.exit(65);
+  }
+}
+
+
+function error(line: number, message: string) {
+  reportError(line, "", message);
+}
+
+function reportError(line: number, where: string, message: string) {
+  console.log(`Error (line ${line} at ${where}): ${message}`);
 }

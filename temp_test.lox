@@ -1,0 +1,6 @@
+() 
+// this is a comment
+(( ))"snork"{} // grouping stuff
+!*+-/=<> <= == "second"// operators
+"farker" = "forker" 1 2 / "lurker" !
+"unterm

@@ -1,4 +1,4 @@
-import Token, { isToken, keywords, Literal, TokenType } from "./token.ts";
+import Token, { isToken, KEYWORDS, Literal, TokenType } from "./token.ts";
 
 export default class Scanner {
   start = 0;
@@ -104,7 +104,7 @@ export default class Scanner {
           [tokenType, literal] = this.scanNumber();
           // identifiers / reserved words
         } else if (isAlphaNumeric(c)) {
-          tokenType = this.scanIdentifier();
+          tokenType = this.scanIdentifierOrKeyword();
         } else return new Error(this.line, `${c} is not a valid lox token`);
     }
 
@@ -116,13 +116,12 @@ export default class Scanner {
     );
   }
 
-  private scanIdentifier(): TokenType {
+  private scanIdentifierOrKeyword(): TokenType {
     while (isAlphaNumeric(this.peek())) this.advance();
     const lexeme = this.source.substring(this.start, this.current)
       .toLowerCase();
-    console.log(`testing lex: ${lexeme}`);
-    const tokenCandidate = keywords.get(lexeme);
-    return tokenCandidate ?? "IDENTIFIER";
+    const keywordCandidate = KEYWORDS.get(lexeme);
+    return keywordCandidate ?? "IDENTIFIER";
   }
 
   private scanString(): [TokenType, string] | Error {

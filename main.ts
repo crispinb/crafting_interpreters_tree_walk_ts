@@ -1,6 +1,6 @@
 import { readAllSync } from "https://deno.land/std@0.170.0/streams/read_all.ts";
 import { writeAllSync } from "https://deno.land/std@0.170.0/streams/write_all.ts";
-import Scanner, { Token } from "./scanner.ts";
+import Scanner from "./scanner.ts";
 
 if (import.meta.main) {
   main(Deno.args);
@@ -46,8 +46,7 @@ function run(source: string) {
   }
 }
 
-
-function error(line: number, message: string) {
+function _error(line: number, message: string) {
   reportError(line, "", message);
 }
 

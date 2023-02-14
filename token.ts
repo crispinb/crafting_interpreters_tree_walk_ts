@@ -69,7 +69,7 @@ export type TokenType =
   | "EOF";
 
 // we could just have a list of words here as our types
-//  are just strings. But a map is flexible if TokenType 
+//  are just strings. But a map is flexible if TokenType
 //  changes, and offers a nice api
 export const KEYWORDS = new Map<string, TokenType>([
   ["and", "AND"],

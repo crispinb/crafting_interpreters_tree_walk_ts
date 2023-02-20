@@ -1,6 +1,6 @@
 {
   "tasks": {
     "dev": "deno run --watch main.ts",
-    "create-classes": "deno run -A ./tools/create_classes.ts -p ast/generated/classes.ts"
+    "create-classes": "deno run -A ./tools/create_ast_classes.ts -p ast/classes.ts"
   }
 }
